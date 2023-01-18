@@ -1,18 +1,13 @@
 module FSM (Out, reset_b, clock, In);
    
-   output reg Out;
-   input      reset_b, clock, In;
-   
-   reg [1:0]  state;
-   reg [1:0]  nextState;  
-   
-   parameter S0 = 2'b00;
-   parameter S1 = 2'b01;
-   parameter S2 = 2'b10;
-   parameter S3 = 2'b11;
+   output logic Out;
+   input logic 	reset_b, clock, In;
+
+   typedef enum logic [1:0] {S0, S1, S2, S3} statetype;
+   statetype state, nextState;
    
    // State Register
-   always @ (posedge clock, negedge reset_b) 
+   always_ff @ (posedge clock, negedge reset_b) 
      begin
 	if (~reset_b)
 	  state <= S0;
@@ -21,7 +16,7 @@ module FSM (Out, reset_b, clock, In);
      end   
 
    // Next State Logic
-   always @(*) 
+   always_comb 
      begin
 	case (state)
 	  S0: begin

@@ -1,10 +1,10 @@
 module stimulus ();
 
-   reg  clock;
-   reg  In;
-   reg  reset_b;
+   logic  clock;
+   logic  In;
+   logic  reset_b;
    
-   wire Out;
+   logic  Out;
    
    integer handle3;
    integer desc3;

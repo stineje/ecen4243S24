@@ -1,16 +1,16 @@
 # do FSM.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 07:40:13 on Jan 18,2023
-# vlog FSM.v FSM_tb.v 
+# Start time: 07:47:07 on Jan 18,2023
+# vlog FSM.sv FSM_tb.sv 
 # -- Compiling module FSM
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 07:40:13 on Jan 18,2023, Elapsed time: 0:00:00
+# End time: 07:47:07 on Jan 18,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 07:40:13 on Jan 18,2023
+# Start time: 07:47:07 on Jan 18,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
 # //  Questa Sim-64
@@ -27,6 +27,7 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# Loading sv_std.std
 # Loading work.stimulus(fast)
 # Loading work.FSM(fast)
 # .list
@@ -38,5 +39,5 @@
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
-# End time: 07:40:15 on Jan 18,2023, Elapsed time: 0:00:02
+# End time: 07:47:09 on Jan 18,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
