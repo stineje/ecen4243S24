@@ -1,0 +1,91 @@
+
+jalr.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
+   8:	01007663          	bgeu	zero,a6,14 <__start-0x3fffec>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
+
+Disassembly of section .text:
+
+00400000 <__start>:
+  400000:	00100593          	li	a1,1
+  400004:	00000293          	li	t0,0
+  400008:	00000317          	auipc	t1,0x0
+  40000c:	01030313          	addi	t1,t1,16 # 400018 <target_2>
+  400010:	000302e7          	jalr	t0,t1
+
+00400014 <linkaddr_2>:
+  400014:	0900006f          	j	4000a4 <fail>
+
+00400018 <target_2>:
+  400018:	00000317          	auipc	t1,0x0
+  40001c:	ffc30313          	addi	t1,t1,-4 # 400014 <linkaddr_2>
+  400020:	08629263          	bne	t0,t1,4000a4 <fail>
+
+00400024 <test02>:
+  400024:	00200593          	li	a1,2
+  400028:	00000213          	li	tp,0
+
+0040002c <label1_test02>:
+  40002c:	00000317          	auipc	t1,0x0
+  400030:	01030313          	addi	t1,t1,16 # 40003c <label2_test02>
+  400034:	000309e7          	jalr	s3,t1
+  400038:	06b01663          	bne	zero,a1,4000a4 <fail>
+
+0040003c <label2_test02>:
+  40003c:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400040:	00200293          	li	t0,2
+  400044:	fe5214e3          	bne	tp,t0,40002c <label1_test02>
+
+00400048 <test03>:
+  400048:	00300593          	li	a1,3
+  40004c:	00000213          	li	tp,0
+
+00400050 <label1_test03>:
+  400050:	00000317          	auipc	t1,0x0
+  400054:	01430313          	addi	t1,t1,20 # 400064 <label2_test03>
+  400058:	00000013          	nop
+  40005c:	000309e7          	jalr	s3,t1
+  400060:	04b01263          	bne	zero,a1,4000a4 <fail>
+
+00400064 <label2_test03>:
+  400064:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400068:	00200293          	li	t0,2
+  40006c:	fe5212e3          	bne	tp,t0,400050 <label1_test03>
+
+00400070 <test04>:
+  400070:	00400593          	li	a1,4
+  400074:	00000213          	li	tp,0
+
+00400078 <label1_test04>:
+  400078:	00000317          	auipc	t1,0x0
+  40007c:	01830313          	addi	t1,t1,24 # 400090 <label2_test04>
+  400080:	00000013          	nop
+  400084:	00000013          	nop
+  400088:	000309e7          	jalr	s3,t1
+  40008c:	00b01c63          	bne	zero,a1,4000a4 <fail>
+
+00400090 <label2_test04>:
+  400090:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400094:	00200293          	li	t0,2
+  400098:	fe5210e3          	bne	tp,t0,400078 <label1_test04>
+
+0040009c <success>:
+  40009c:	00a00513          	li	a0,10
+  4000a0:	00000073          	ecall
+
+004000a4 <fail>:
+  4000a4:	01100513          	li	a0,17
+  4000a8:	00000073          	ecall

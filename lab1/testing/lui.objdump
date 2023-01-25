@@ -1,0 +1,61 @@
+
+lui.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
+   8:	01007663          	bgeu	zero,a6,14 <__start-0x3fffec>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
+
+Disassembly of section .text:
+
+00400000 <__start>:
+  400000:	00100593          	li	a1,1
+  400004:	000000b7          	lui	ra,0x0
+  400008:	00000e93          	li	t4,0
+  40000c:	05d09c63          	bne	ra,t4,400064 <fail>
+
+00400010 <test02>:
+  400010:	00200593          	li	a1,2
+  400014:	fffff0b7          	lui	ra,0xfffff
+  400018:	4010d093          	srai	ra,ra,0x1
+  40001c:	80000e93          	li	t4,-2048
+  400020:	05d09263          	bne	ra,t4,400064 <fail>
+
+00400024 <test03>:
+  400024:	00300593          	li	a1,3
+  400028:	7ffff0b7          	lui	ra,0x7ffff
+  40002c:	4140d093          	srai	ra,ra,0x14
+  400030:	7ff00e93          	li	t4,2047
+  400034:	03d09863          	bne	ra,t4,400064 <fail>
+
+00400038 <test04>:
+  400038:	00400593          	li	a1,4
+  40003c:	800000b7          	lui	ra,0x80000
+  400040:	4140d093          	srai	ra,ra,0x14
+  400044:	80000e93          	li	t4,-2048
+  400048:	01d09e63          	bne	ra,t4,400064 <fail>
+
+0040004c <test05>:
+  40004c:	00500593          	li	a1,5
+  400050:	80000037          	lui	zero,0x80000
+  400054:	00000e93          	li	t4,0
+  400058:	01d01663          	bne	zero,t4,400064 <fail>
+
+0040005c <success>:
+  40005c:	00a00513          	li	a0,10
+  400060:	00000073          	ecall
+
+00400064 <fail>:
+  400064:	01100513          	li	a0,17
+  400068:	00000073          	ecall

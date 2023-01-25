@@ -1,0 +1,283 @@
+
+bne.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
+   8:	01007663          	bgeu	zero,a6,14 <__start-0x3fffec>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
+
+Disassembly of section .text:
+
+00400000 <__start>:
+  400000:	00100593          	li	a1,1
+  400004:	00000093          	li	ra,0
+  400008:	00100113          	li	sp,1
+  40000c:	00209663          	bne	ra,sp,400018 <label2_test01>
+  400010:	28b01663          	bne	zero,a1,40029c <fail>
+
+00400014 <label1_test01>:
+  400014:	00b01663          	bne	zero,a1,400020 <label3_test01>
+
+00400018 <label2_test01>:
+  400018:	fe209ee3          	bne	ra,sp,400014 <label1_test01>
+  40001c:	28b01063          	bne	zero,a1,40029c <fail>
+
+00400020 <label3_test01>:
+  400020:	00200593          	li	a1,2
+  400024:	00100093          	li	ra,1
+  400028:	00000113          	li	sp,0
+  40002c:	00209663          	bne	ra,sp,400038 <label2_test02>
+  400030:	26b01663          	bne	zero,a1,40029c <fail>
+
+00400034 <label1_test02>:
+  400034:	00b01663          	bne	zero,a1,400040 <label3_test02>
+
+00400038 <label2_test02>:
+  400038:	fe209ee3          	bne	ra,sp,400034 <label1_test02>
+  40003c:	26b01063          	bne	zero,a1,40029c <fail>
+
+00400040 <label3_test02>:
+  400040:	00300593          	li	a1,3
+  400044:	fff00093          	li	ra,-1
+  400048:	00100113          	li	sp,1
+  40004c:	00209663          	bne	ra,sp,400058 <label2_test03>
+  400050:	24b01663          	bne	zero,a1,40029c <fail>
+
+00400054 <label1_test03>:
+  400054:	00b01663          	bne	zero,a1,400060 <label3_test03>
+
+00400058 <label2_test03>:
+  400058:	fe209ee3          	bne	ra,sp,400054 <label1_test03>
+  40005c:	24b01063          	bne	zero,a1,40029c <fail>
+
+00400060 <label3_test03>:
+  400060:	00400593          	li	a1,4
+  400064:	00100093          	li	ra,1
+  400068:	fff00113          	li	sp,-1
+  40006c:	00209663          	bne	ra,sp,400078 <label2_test04>
+  400070:	22b01663          	bne	zero,a1,40029c <fail>
+
+00400074 <label1_test04>:
+  400074:	00b01663          	bne	zero,a1,400080 <label3_test04>
+
+00400078 <label2_test04>:
+  400078:	fe209ee3          	bne	ra,sp,400074 <label1_test04>
+  40007c:	22b01063          	bne	zero,a1,40029c <fail>
+
+00400080 <label3_test04>:
+  400080:	00500593          	li	a1,5
+  400084:	00000093          	li	ra,0
+  400088:	00000113          	li	sp,0
+  40008c:	00209463          	bne	ra,sp,400094 <label1_test05>
+  400090:	00b01463          	bne	zero,a1,400098 <label2_test05>
+
+00400094 <label1_test05>:
+  400094:	20b01463          	bne	zero,a1,40029c <fail>
+
+00400098 <label2_test05>:
+  400098:	fe209ee3          	bne	ra,sp,400094 <label1_test05>
+
+0040009c <label3_test05>:
+  40009c:	00600593          	li	a1,6
+  4000a0:	00100093          	li	ra,1
+  4000a4:	00100113          	li	sp,1
+  4000a8:	00209463          	bne	ra,sp,4000b0 <label1_test06>
+  4000ac:	00b01463          	bne	zero,a1,4000b4 <label2_test06>
+
+004000b0 <label1_test06>:
+  4000b0:	1eb01663          	bne	zero,a1,40029c <fail>
+
+004000b4 <label2_test06>:
+  4000b4:	fe209ee3          	bne	ra,sp,4000b0 <label1_test06>
+
+004000b8 <label3_test06>:
+  4000b8:	00700593          	li	a1,7
+  4000bc:	fff00093          	li	ra,-1
+  4000c0:	fff00113          	li	sp,-1
+  4000c4:	00209463          	bne	ra,sp,4000cc <label1_test07>
+  4000c8:	00b01463          	bne	zero,a1,4000d0 <label2_test07>
+
+004000cc <label1_test07>:
+  4000cc:	1cb01863          	bne	zero,a1,40029c <fail>
+
+004000d0 <label2_test07>:
+  4000d0:	fe209ee3          	bne	ra,sp,4000cc <label1_test07>
+
+004000d4 <label3_test07>:
+  4000d4:	00800593          	li	a1,8
+  4000d8:	00000213          	li	tp,0
+
+004000dc <label1_test08>:
+  4000dc:	00000093          	li	ra,0
+  4000e0:	00000113          	li	sp,0
+  4000e4:	1a209c63          	bne	ra,sp,40029c <fail>
+  4000e8:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  4000ec:	00200293          	li	t0,2
+  4000f0:	fe5216e3          	bne	tp,t0,4000dc <label1_test08>
+
+004000f4 <test09>:
+  4000f4:	00900593          	li	a1,9
+  4000f8:	00000213          	li	tp,0
+
+004000fc <label1_test09>:
+  4000fc:	00000093          	li	ra,0
+  400100:	00000113          	li	sp,0
+  400104:	00000013          	nop
+  400108:	18209a63          	bne	ra,sp,40029c <fail>
+  40010c:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400110:	00200293          	li	t0,2
+  400114:	fe5214e3          	bne	tp,t0,4000fc <label1_test09>
+
+00400118 <test10>:
+  400118:	00a00593          	li	a1,10
+  40011c:	00000213          	li	tp,0
+
+00400120 <label1_test10>:
+  400120:	00000093          	li	ra,0
+  400124:	00000113          	li	sp,0
+  400128:	00000013          	nop
+  40012c:	00000013          	nop
+  400130:	16209663          	bne	ra,sp,40029c <fail>
+  400134:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400138:	00200293          	li	t0,2
+  40013c:	fe5212e3          	bne	tp,t0,400120 <label1_test10>
+
+00400140 <test11>:
+  400140:	00b00593          	li	a1,11
+  400144:	00000213          	li	tp,0
+
+00400148 <label1_test11>:
+  400148:	00000093          	li	ra,0
+  40014c:	00000013          	nop
+  400150:	00000113          	li	sp,0
+  400154:	14209463          	bne	ra,sp,40029c <fail>
+  400158:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  40015c:	00200293          	li	t0,2
+  400160:	fe5214e3          	bne	tp,t0,400148 <label1_test11>
+
+00400164 <test12>:
+  400164:	00c00593          	li	a1,12
+  400168:	00000213          	li	tp,0
+
+0040016c <label1_test12>:
+  40016c:	00000093          	li	ra,0
+  400170:	00000013          	nop
+  400174:	00000113          	li	sp,0
+  400178:	00000013          	nop
+  40017c:	12209063          	bne	ra,sp,40029c <fail>
+  400180:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400184:	00200293          	li	t0,2
+  400188:	fe5212e3          	bne	tp,t0,40016c <label1_test12>
+
+0040018c <test13>:
+  40018c:	00d00593          	li	a1,13
+  400190:	00000213          	li	tp,0
+
+00400194 <label1_test13>:
+  400194:	00000093          	li	ra,0
+  400198:	00000013          	nop
+  40019c:	00000013          	nop
+  4001a0:	00000113          	li	sp,0
+  4001a4:	0e209c63          	bne	ra,sp,40029c <fail>
+  4001a8:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  4001ac:	00200293          	li	t0,2
+  4001b0:	fe5212e3          	bne	tp,t0,400194 <label1_test13>
+
+004001b4 <test14>:
+  4001b4:	00e00593          	li	a1,14
+  4001b8:	00000213          	li	tp,0
+
+004001bc <label1_test14>:
+  4001bc:	00000093          	li	ra,0
+  4001c0:	00000113          	li	sp,0
+  4001c4:	0c209c63          	bne	ra,sp,40029c <fail>
+  4001c8:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  4001cc:	00200293          	li	t0,2
+  4001d0:	fe5216e3          	bne	tp,t0,4001bc <label1_test14>
+
+004001d4 <test15>:
+  4001d4:	00f00593          	li	a1,15
+  4001d8:	00000213          	li	tp,0
+
+004001dc <label1_test15>:
+  4001dc:	00000093          	li	ra,0
+  4001e0:	00000113          	li	sp,0
+  4001e4:	00000013          	nop
+  4001e8:	0a209a63          	bne	ra,sp,40029c <fail>
+  4001ec:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  4001f0:	00200293          	li	t0,2
+  4001f4:	fe5214e3          	bne	tp,t0,4001dc <label1_test15>
+
+004001f8 <test16>:
+  4001f8:	01000593          	li	a1,16
+  4001fc:	00000213          	li	tp,0
+
+00400200 <label1_test16>:
+  400200:	00000093          	li	ra,0
+  400204:	00000113          	li	sp,0
+  400208:	00000013          	nop
+  40020c:	00000013          	nop
+  400210:	08209663          	bne	ra,sp,40029c <fail>
+  400214:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400218:	00200293          	li	t0,2
+  40021c:	fe5212e3          	bne	tp,t0,400200 <label1_test16>
+
+00400220 <test17>:
+  400220:	01100593          	li	a1,17
+  400224:	00000213          	li	tp,0
+
+00400228 <label1_test17>:
+  400228:	00000093          	li	ra,0
+  40022c:	00000013          	nop
+  400230:	00000113          	li	sp,0
+  400234:	06209463          	bne	ra,sp,40029c <fail>
+  400238:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  40023c:	00200293          	li	t0,2
+  400240:	fe5214e3          	bne	tp,t0,400228 <label1_test17>
+
+00400244 <test18>:
+  400244:	01200593          	li	a1,18
+  400248:	00000213          	li	tp,0
+
+0040024c <label1_test18>:
+  40024c:	00000093          	li	ra,0
+  400250:	00000013          	nop
+  400254:	00000113          	li	sp,0
+  400258:	00000013          	nop
+  40025c:	04209063          	bne	ra,sp,40029c <fail>
+  400260:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  400264:	00200293          	li	t0,2
+  400268:	fe5212e3          	bne	tp,t0,40024c <label1_test18>
+
+0040026c <test19>:
+  40026c:	01300593          	li	a1,19
+  400270:	00000213          	li	tp,0
+
+00400274 <label1_test19>:
+  400274:	00000093          	li	ra,0
+  400278:	00000013          	nop
+  40027c:	00000013          	nop
+  400280:	00000113          	li	sp,0
+  400284:	00209c63          	bne	ra,sp,40029c <fail>
+  400288:	00120213          	addi	tp,tp,1 # 1 <__start-0x3fffff>
+  40028c:	00200293          	li	t0,2
+  400290:	fe5212e3          	bne	tp,t0,400274 <label1_test19>
+
+00400294 <success>:
+  400294:	00a00513          	li	a0,10
+  400298:	00000073          	ecall
+
+0040029c <fail>:
+  40029c:	01100513          	li	a0,17
+  4002a0:	00000073          	ecall
