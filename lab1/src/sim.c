@@ -55,7 +55,7 @@ int bchar_to_int(char* rsa) {
   return result;
 }
 
-int data_process(char* i_) {
+int r_process(char* i_) {
 
   char d_opcode[8];
   d_opcode[0] = i_[31-6]; 
@@ -98,7 +98,7 @@ int data_process(char* i_) {
   return 1;	
 }
 
-int imm_process(char* i_) {
+int i_process(char* i_) {
 
   char d_opcode[8];
   d_opcode[0] = i_[31-6]; 
@@ -203,16 +203,6 @@ int b_process(char* i_) {
 
 }
 
-int mul_process(char* i_) {
-
-  /* This function execute multiply instruction */
-
-  /* Add multiply instructions here */ 
-
-  return 1;
-
-}
-
 int s_process(char* i_) {
 
   /* This function execute S type instructions */
@@ -261,37 +251,37 @@ int decode_and_execute(char* i_) {
   if((i_[25] == '0') && (i_[26] == '0') &&
      (i_[27] == '1') && (i_[28] == '0') &&
      (i_[29] == '0') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is an Immediate Type Data Transfer Instruction. \n");
-    imm_process(i_);
+    printf("- This is an Immediate Type Instruction. \n");
+    i_process(i_);
   }
   if((i_[25] == '0') && (i_[26] == '1') &&
      (i_[27] == '1') && (i_[28] == '0') &&
      (i_[29] == '0') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is an R Type Data Transfer Instruction. \n");
-    data_process(i_);
+    printf("- This is an R Type Instruction. \n");
+    r_process(i_);
   }    
   if((i_[25] == '1') && (i_[26] == '1') &&
      (i_[27] == '0') && (i_[28] == '0') &&
      (i_[29] == '0') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is a Branch Instruction. \n");
+    printf("- This is a B Type Instruction. \n");
     b_process(i_);
   }
   if((i_[25] == '0') && (i_[26] == '1') &&
      (i_[27] == '0') && (i_[28] == '0') &&
      (i_[29] == '0') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is a Store Instruction. \n");
+    printf("- This is a S Type Instruction. \n");
     s_process(i_);
   }  
   if((i_[25] == '1') && (i_[26] == '1') &&
      (i_[27] == '0') && (i_[28] == '1') &&
      (i_[29] == '1') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is a Jump Instruction. \n");
+    printf("- This is a J Type Instruction. \n");
     j_process(i_);
   }
   if((i_[25] == '0') && (i_[26] == '0') &&
      (i_[27] == '1') && (i_[28] == '0') &&
      (i_[29] == '1') && (i_[30] == '1') && (i_[31] == '1')) {
-    printf("- This is a U Instruction. \n");
+    printf("- This is a U Type Instruction. \n");
     u_process(i_);
   }  
   if((i_[25] == '1') && (i_[26] == '1') &&
