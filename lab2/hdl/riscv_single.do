@@ -35,11 +35,20 @@ vsim -debugdb -voptargs=+acc work.testbench
 # view list
 # view wave
 
+# Load Decoding
+do wave.do
+
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
 # add wave -hex -r /stimulus/*
 add wave -noupdate -divider -height 32 "Top"
 add wave -hex /testbench/dut/*
+add wave -noupdate -expand -group Instructions /testbench/dut/rv32single/reset
+add wave -noupdate -expand -group Instructions -color {Orange Red} /testbench/dut/rv32single/PC
+add wave -noupdate -expand -group Instructions -color Orange /testbench/dut/rv32single/Instr
+add wave -noupdate -expand -group Instructions -color Orange -radix Instructions /testbench/dut/rv32single/Instr
+add wave -noupdate -expand -group Instructions -color Orange /testbench/dut/rv32single/dp/Instr
+add wave -noupdate -expand -group Instructions -color Orange -radix Instructions /testbench/dut/rv32single/dp/Instr
 add wave -noupdate -divider -height 32 "Datapath"
 add wave -hex /testbench/dut/rv32single/dp/*
 add wave -noupdate -divider -height 32 "Control"

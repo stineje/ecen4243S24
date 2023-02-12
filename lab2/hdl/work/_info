@@ -11,10 +11,10 @@ z2
 cModel Technology
 Z0 d/home/jstine/ecen4243/ecen4243S23/lab2/hdl
 T_opt
-Z1 !s110 1676237238
-VcVgj3IJPT`3Kn0m6L6MZ61
+Z1 !s110 1676238467
+VoB1_W=eMBS4oWlQE8JMKS2
 04 9 4 work testbench fast 0
-=1-b07b25d4a6a8-63e959b6-57b02-f938
+=1-b07b25d4a6a8-63e95e83-63610-10124
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z2 tCvgOpt 0
@@ -38,7 +38,7 @@ Z8 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z9 !s108 1676237238.000000
+Z9 !s108 1676238467.000000
 Z10 !s107 riscv_single.sv|
 Z11 !s90 -reportprogress|300|riscv_single.sv|
 !i113 0
