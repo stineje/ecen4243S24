@@ -30,7 +30,7 @@ vlib work
 vlog riscv_single.sv
 
 # start and run simulation
-vsim -voptargs=+acc work.testbench
+vsim -debugdb -voptargs=+acc work.testbench
 
 # view list
 # view wave
@@ -44,6 +44,10 @@ add wave -noupdate -divider -height 32 "Datapath"
 add wave -hex /testbench/dut/rv32single/dp/*
 add wave -noupdate -divider -height 32 "Control"
 add wave -hex /testbench/dut/rv32single/c/*
+add wave -noupdate -divider -height 32 "Main Decoder"
+add wave -hex /testbench/dut/rv32single/c/md/*
+add wave -noupdate -divider -height 32 "ALU Decoder"
+add wave -hex /testbench/dut/rv32single/c/ad/*
 add wave -noupdate -divider -height 32 "Data Memory"
 add wave -hex /testbench/dut/dmem/*
 add wave -noupdate -divider -height 32 "Instruction Memory"
@@ -67,6 +71,9 @@ configure wave -childrowmargin 2
 
 -- Run the Simulation
 run 300 ns
+
+-- Add schematic
+add schematic -full sim:/testbench/dut/rv32single
 
 -- Save memory for checking (if needed)
 # mem save -outfile memory.dat -wordsperline 1 /testbench/dut/dmem/RAM
