@@ -43,6 +43,7 @@ do wave.do
 # add wave -hex -r /stimulus/*
 add wave -noupdate -divider -height 32 "Top"
 add wave -hex /testbench/dut/*
+add wave -noupdate -divider -height 32 "Instructions"
 add wave -noupdate -expand -group Instructions /testbench/dut/rv32single/reset
 add wave -noupdate -expand -group Instructions -color {Orange Red} /testbench/dut/rv32single/PC
 add wave -noupdate -expand -group Instructions -color Orange /testbench/dut/rv32single/Instr
