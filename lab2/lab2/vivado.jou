@@ -1,0 +1,277 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Feb 14 15:22:12 2019
+# Process ID: 13720
+# Current directory: C:/Users/alexasu/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9908
+# Log file: C:/Users/alexasu/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/alexasu/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/alexasu/Desktop/lab2/lab2.xpr
+update_compile_order -fileset sources_1
+update_module_reference design_1_top_0_0
+update_module_reference design_1_top_0_0
+connect_bd_net [get_bd_pins top_0/AXIstart] [get_bd_pins AXI_Converter_0/trigger]
+update_module_reference design_1_top_0_0
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/processing_system7_0/inst/FCLK_CLK0 ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/top_0/inst/core/ALUResult[0]} {design_1_i/top_0/inst/core/ALUResult[1]} {design_1_i/top_0/inst/core/ALUResult[2]} {design_1_i/top_0/inst/core/ALUResult[3]} {design_1_i/top_0/inst/core/ALUResult[4]} {design_1_i/top_0/inst/core/ALUResult[5]} {design_1_i/top_0/inst/core/ALUResult[6]} {design_1_i/top_0/inst/core/ALUResult[7]} {design_1_i/top_0/inst/core/ALUResult[8]} {design_1_i/top_0/inst/core/ALUResult[9]} {design_1_i/top_0/inst/core/ALUResult[10]} {design_1_i/top_0/inst/core/ALUResult[11]} {design_1_i/top_0/inst/core/ALUResult[12]} {design_1_i/top_0/inst/core/ALUResult[13]} {design_1_i/top_0/inst/core/ALUResult[14]} {design_1_i/top_0/inst/core/ALUResult[15]} {design_1_i/top_0/inst/core/ALUResult[16]} {design_1_i/top_0/inst/core/ALUResult[17]} {design_1_i/top_0/inst/core/ALUResult[18]} {design_1_i/top_0/inst/core/ALUResult[19]} {design_1_i/top_0/inst/core/ALUResult[20]} {design_1_i/top_0/inst/core/ALUResult[21]} {design_1_i/top_0/inst/core/ALUResult[22]} {design_1_i/top_0/inst/core/ALUResult[23]} {design_1_i/top_0/inst/core/ALUResult[24]} {design_1_i/top_0/inst/core/ALUResult[25]} {design_1_i/top_0/inst/core/ALUResult[26]} {design_1_i/top_0/inst/core/ALUResult[27]} {design_1_i/top_0/inst/core/ALUResult[28]} {design_1_i/top_0/inst/core/ALUResult[29]} {design_1_i/top_0/inst/core/ALUResult[30]} {design_1_i/top_0/inst/core/ALUResult[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/top_0/inst/core/Instr[0]} {design_1_i/top_0/inst/core/Instr[1]} {design_1_i/top_0/inst/core/Instr[2]} {design_1_i/top_0/inst/core/Instr[3]} {design_1_i/top_0/inst/core/Instr[4]} {design_1_i/top_0/inst/core/Instr[5]} {design_1_i/top_0/inst/core/Instr[6]} {design_1_i/top_0/inst/core/Instr[7]} {design_1_i/top_0/inst/core/Instr[8]} {design_1_i/top_0/inst/core/Instr[9]} {design_1_i/top_0/inst/core/Instr[10]} {design_1_i/top_0/inst/core/Instr[11]} {design_1_i/top_0/inst/core/Instr[12]} {design_1_i/top_0/inst/core/Instr[13]} {design_1_i/top_0/inst/core/Instr[14]} {design_1_i/top_0/inst/core/Instr[15]} {design_1_i/top_0/inst/core/Instr[16]} {design_1_i/top_0/inst/core/Instr[17]} {design_1_i/top_0/inst/core/Instr[18]} {design_1_i/top_0/inst/core/Instr[19]} {design_1_i/top_0/inst/core/Instr[20]} {design_1_i/top_0/inst/core/Instr[21]} {design_1_i/top_0/inst/core/Instr[22]} {design_1_i/top_0/inst/core/Instr[23]} {design_1_i/top_0/inst/core/Instr[24]} {design_1_i/top_0/inst/core/Instr[25]} {design_1_i/top_0/inst/core/Instr[26]} {design_1_i/top_0/inst/core/Instr[27]} {design_1_i/top_0/inst/core/Instr[28]} {design_1_i/top_0/inst/core/Instr[29]} {design_1_i/top_0/inst/core/Instr[30]} {design_1_i/top_0/inst/core/Instr[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/top_0/inst/core/ReadData[0]} {design_1_i/top_0/inst/core/ReadData[1]} {design_1_i/top_0/inst/core/ReadData[2]} {design_1_i/top_0/inst/core/ReadData[3]} {design_1_i/top_0/inst/core/ReadData[4]} {design_1_i/top_0/inst/core/ReadData[5]} {design_1_i/top_0/inst/core/ReadData[6]} {design_1_i/top_0/inst/core/ReadData[7]} {design_1_i/top_0/inst/core/ReadData[8]} {design_1_i/top_0/inst/core/ReadData[9]} {design_1_i/top_0/inst/core/ReadData[10]} {design_1_i/top_0/inst/core/ReadData[11]} {design_1_i/top_0/inst/core/ReadData[12]} {design_1_i/top_0/inst/core/ReadData[13]} {design_1_i/top_0/inst/core/ReadData[14]} {design_1_i/top_0/inst/core/ReadData[15]} {design_1_i/top_0/inst/core/ReadData[16]} {design_1_i/top_0/inst/core/ReadData[17]} {design_1_i/top_0/inst/core/ReadData[18]} {design_1_i/top_0/inst/core/ReadData[19]} {design_1_i/top_0/inst/core/ReadData[20]} {design_1_i/top_0/inst/core/ReadData[21]} {design_1_i/top_0/inst/core/ReadData[22]} {design_1_i/top_0/inst/core/ReadData[23]} {design_1_i/top_0/inst/core/ReadData[24]} {design_1_i/top_0/inst/core/ReadData[25]} {design_1_i/top_0/inst/core/ReadData[26]} {design_1_i/top_0/inst/core/ReadData[27]} {design_1_i/top_0/inst/core/ReadData[28]} {design_1_i/top_0/inst/core/ReadData[29]} {design_1_i/top_0/inst/core/ReadData[30]} {design_1_i/top_0/inst/core/ReadData[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/top_0/inst/core/PC[0]} {design_1_i/top_0/inst/core/PC[1]} {design_1_i/top_0/inst/core/PC[2]} {design_1_i/top_0/inst/core/PC[3]} {design_1_i/top_0/inst/core/PC[4]} {design_1_i/top_0/inst/core/PC[5]} {design_1_i/top_0/inst/core/PC[6]} {design_1_i/top_0/inst/core/PC[7]} {design_1_i/top_0/inst/core/PC[8]} {design_1_i/top_0/inst/core/PC[9]} {design_1_i/top_0/inst/core/PC[10]} {design_1_i/top_0/inst/core/PC[11]} {design_1_i/top_0/inst/core/PC[12]} {design_1_i/top_0/inst/core/PC[13]} {design_1_i/top_0/inst/core/PC[14]} {design_1_i/top_0/inst/core/PC[15]} {design_1_i/top_0/inst/core/PC[16]} {design_1_i/top_0/inst/core/PC[17]} {design_1_i/top_0/inst/core/PC[18]} {design_1_i/top_0/inst/core/PC[19]} {design_1_i/top_0/inst/core/PC[20]} {design_1_i/top_0/inst/core/PC[21]} {design_1_i/top_0/inst/core/PC[22]} {design_1_i/top_0/inst/core/PC[23]} {design_1_i/top_0/inst/core/PC[24]} {design_1_i/top_0/inst/core/PC[25]} {design_1_i/top_0/inst/core/PC[26]} {design_1_i/top_0/inst/core/PC[27]} {design_1_i/top_0/inst/core/PC[28]} {design_1_i/top_0/inst/core/PC[29]} {design_1_i/top_0/inst/core/PC[30]} {design_1_i/top_0/inst/core/PC[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/top_0/inst/core/WriteData[0]} {design_1_i/top_0/inst/core/WriteData[1]} {design_1_i/top_0/inst/core/WriteData[2]} {design_1_i/top_0/inst/core/WriteData[3]} {design_1_i/top_0/inst/core/WriteData[4]} {design_1_i/top_0/inst/core/WriteData[5]} {design_1_i/top_0/inst/core/WriteData[6]} {design_1_i/top_0/inst/core/WriteData[7]} {design_1_i/top_0/inst/core/WriteData[8]} {design_1_i/top_0/inst/core/WriteData[9]} {design_1_i/top_0/inst/core/WriteData[10]} {design_1_i/top_0/inst/core/WriteData[11]} {design_1_i/top_0/inst/core/WriteData[12]} {design_1_i/top_0/inst/core/WriteData[13]} {design_1_i/top_0/inst/core/WriteData[14]} {design_1_i/top_0/inst/core/WriteData[15]} {design_1_i/top_0/inst/core/WriteData[16]} {design_1_i/top_0/inst/core/WriteData[17]} {design_1_i/top_0/inst/core/WriteData[18]} {design_1_i/top_0/inst/core/WriteData[19]} {design_1_i/top_0/inst/core/WriteData[20]} {design_1_i/top_0/inst/core/WriteData[21]} {design_1_i/top_0/inst/core/WriteData[22]} {design_1_i/top_0/inst/core/WriteData[23]} {design_1_i/top_0/inst/core/WriteData[24]} {design_1_i/top_0/inst/core/WriteData[25]} {design_1_i/top_0/inst/core/WriteData[26]} {design_1_i/top_0/inst/core/WriteData[27]} {design_1_i/top_0/inst/core/WriteData[28]} {design_1_i/top_0/inst/core/WriteData[29]} {design_1_i/top_0/inst/core/WriteData[30]} {design_1_i/top_0/inst/core/WriteData[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list design_1_i/top_0/inst/memcontrol/AXIstart ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list design_1_i/top_0/inst/memcontrol/Done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list design_1_i/top_0/inst/memcontrol/DRW ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list design_1_i/top_0/inst/core/MemStrobe ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list design_1_i/top_0/inst/core/MemWrite ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list design_1_i/top_0/inst/memcontrol/MemWrite ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list design_1_i/top_0/inst/memcontrol/MStrobe ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list design_1_i/top_0/inst/core/PReady ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list design_1_i/top_0/inst/memcontrol/Trigger ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/top_0/inst/core/ALUResult} {design_1_i/top_0/inst/core/Instr} {design_1_i/top_0/inst/core/MemStrobe} {design_1_i/top_0/inst/core/MemWrite} {design_1_i/top_0/inst/core/PC} {design_1_i/top_0/inst/core/PReady} {design_1_i/top_0/inst/core/ReadData} {design_1_i/top_0/inst/core/WriteData} {design_1_i/top_0/inst/memcontrol/AXIstart} {design_1_i/top_0/inst/memcontrol/Done} {design_1_i/top_0/inst/memcontrol/DRW} {design_1_i/top_0/inst/memcontrol/MemWrite} {design_1_i/top_0/inst/memcontrol/MStrobe} {design_1_i/top_0/inst/memcontrol/Trigger} }
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes design_1_i/top_0/inst/core/MemStrobe -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_top_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+save_wave_config {C:/Users/alexasu/Desktop/lab2/lab2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+regenerate_bd_layout -routing
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+undo
+update_module_reference design_1_top_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+save_wave_config {C:/Users/alexasu/Desktop/lab2/lab2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+regenerate_bd_layout
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_top_0_0
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+save_wave_config {C:/Users/alexasu/Desktop/lab2/lab2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {C:/Users/alexasu/Desktop/lab2/lab2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_top_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes design_1_i/top_0/inst/core/MemStrobe -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {C:/Users/alexasu/Desktop/lab2/lab2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_top_0_0
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/alexasu/Desktop/lab2/lab2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210014A24EA3A}
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+close_bd_design [get_bd_designs design_1]
+close_hw
+open_bd_design {C:/Users/alexasu/Desktop/lab2/lab2.srcs/sources_1/bd/design_1/design_1.bd}
+archive_project C:/Users/alexasu/Desktop/lab2_rev4.xpr.zip -temp_dir C:/Users/alexasu/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13720-CEAT-ENDV-PC059 -force -exclude_run_results -include_local_ip_cache -include_config_settings
