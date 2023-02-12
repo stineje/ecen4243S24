@@ -1,6 +1,6 @@
 # do riscv_single.do
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 13:11:32 on Feb 12,2023
+# Start time: 13:13:25 on Feb 12,2023
 # vlog riscv_single.sv 
 # -- Compiling module testbench
 # -- Compiling module riscvsingle
@@ -23,10 +23,10 @@
 # Top level modules:
 # 	testbench
 # 	flopenr
-# End time: 13:11:32 on Feb 12,2023, Elapsed time: 0:00:00
+# End time: 13:13:25 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.testbench 
-# Start time: 13:11:32 on Feb 12,2023
+# Start time: 13:13:25 on Feb 12,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Sim-64
 # //  Version 2021.3_1 linux_x86_64 Aug 15 2021
@@ -72,5 +72,5 @@
 #    Time: 195 ns  Iteration: 1  Instance: /testbench
 # Break in Module testbench at riscv_single.sv line 66
 # Stopped at riscv_single.sv line 66
-# End time: 13:11:34 on Feb 12,2023, Elapsed time: 0:00:02
+# End time: 13:13:27 on Feb 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0

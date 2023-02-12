@@ -9,12 +9,12 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/jstine/ecen4243/ecen4243S2023/lab2/hdl
+Z0 d/home/jstine/ecen4243/ecen4243S23/lab2/hdl
 T_opt
-Z1 !s110 1676229092
-V^zJ8]6QD[>82VJ7oD>2<E2
+Z1 !s110 1676229205
+V25ER4_=c9R8`e_^m>C23H1
 04 9 4 work testbench fast 0
-=1-b07b25d4a6a8-63e939e4-6a15b-2632
+=1-b07b25d4a6a8-63e93a55-8edf8-281e
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
@@ -28,7 +28,7 @@ R1
 I@?K6<Rh?LKFkcb<iQL35H0
 S1
 R0
-Z4 w1676228444
+Z4 w1676229131
 Z5 8riscv_single.sv
 Z6 Friscv_single.sv
 !i122 0
@@ -38,7 +38,7 @@ Z8 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z9 !s108 1676229092.000000
+Z9 !s108 1676229205.000000
 Z10 !s107 riscv_single.sv|
 Z11 !s90 riscv_single.sv|
 !i113 0
