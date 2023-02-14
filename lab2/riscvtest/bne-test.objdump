@@ -26,8 +26,7 @@ Disassembly of section .text:
 8000000c:	00209463          	bne	ra,sp,80000014 <label2_test01>
 
 80000010 <label1_test01>:
-80000010:	00500313          	li	t1,5
+80000010:	02a00313          	li	t1,42
 
 80000014 <label2_test01>:
-80000014:	02a00313          	li	t1,42
-80000018:	00000073          	ecall
+80000014:	00000073          	ecall
