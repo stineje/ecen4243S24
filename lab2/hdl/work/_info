@@ -11,24 +11,25 @@ z2
 cModel Technology
 Z0 d/home/jstine/ecen4243/ecen4243S23/lab2/hdl
 T_opt
-!s110 1676238752
-VJ8WI<b_>N=:E4d03OP6id2
+!s110 1676912625
+V<?9=_zYl@ImO9[SlJHz]k2
 04 9 4 work testbench fast 0
-=1-b07b25d4a6a8-63e95fa0-20918-10456
+=1-d45d645256b9-63f3a7f1-b679d-7915
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.3_1;73
+R0
 vadder
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1676238751
+Z3 !s110 1676912757
 !i10b 1
 !s100 hM4YXnFnXK7`WSW8SWMfg0
 I@?K6<Rh?LKFkcb<iQL35H0
 S1
 R0
-Z4 w1676229131
+Z4 w1676912553
 Z5 8riscv_single.sv
 Z6 Friscv_single.sv
 !i122 0
@@ -38,11 +39,11 @@ Z8 OL;L;2021.3_1;73
 r1
 !s85 0
 31
-Z9 !s108 1676238751.000000
-Z10 !s107 riscv_single.sv|
-Z11 !s90 -reportprogress|300|riscv_single.sv|
+Z9 !s108 1676912757.000000
+!s107 riscv_single.sv|
+Z10 !s90 -reportprogress|300|riscv_single.sv|
 !i113 0
-Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 valu
 R2
@@ -63,10 +64,10 @@ r1
 !s85 0
 31
 R9
+Z12 !s107 riscv_single.sv|
 R10
-R11
 !i113 0
-R12
+R11
 R1
 valudec
 R2
@@ -87,17 +88,17 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vcontroller
 R2
 R3
 !i10b 1
-!s100 ]@de<7ZKH6B72P^VFm1G[0
-IBeX=8MSRiRbW@JbBN^6SM3
+!s100 3zX5[L:JcW:N5`JaQ@:R:2
+IYal=1cTE_S3;541^b8R571
 S1
 R0
 R4
@@ -111,10 +112,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vdatapath
 R2
@@ -135,10 +136,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vdmem
 R2
@@ -159,10 +160,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vextend
 R2
@@ -183,10 +184,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vflopenr
 R2
@@ -207,10 +208,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vflopr
 R2
@@ -231,10 +232,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vimem
 R2
@@ -255,10 +256,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vmaindec
 R2
@@ -279,10 +280,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vmux2
 R2
@@ -303,10 +304,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vmux3
 R2
@@ -327,10 +328,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vregfile
 R2
@@ -351,10 +352,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vriscvsingle
 R2
@@ -375,10 +376,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vtestbench
 R2
@@ -399,10 +400,10 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
 vtop
 R2
@@ -423,8 +424,8 @@ r1
 !s85 0
 31
 R9
-R10
-R11
-!i113 0
 R12
+R10
+!i113 0
+R11
 R1
