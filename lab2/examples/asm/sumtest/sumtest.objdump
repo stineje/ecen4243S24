@@ -240,7 +240,7 @@ Disassembly of section .debug_line_str:
   1c:	3334                	fld	fa3,96(a4)
   1e:	2f333253          	.4byte	0x2f333253
   22:	616c                	ld	a1,192(a0)
-  24:	3162                	fld	ft2,56(sp)
+  24:	3262                	fld	ft4,56(sp)
   26:	6178652f          	.4byte	0x6178652f
   2a:	706d                	c.lui	zero,0xffffb
   2c:	656c                	ld	a1,200(a0)
@@ -374,7 +374,7 @@ Disassembly of section .debug_str:
   26:	3334                	fld	fa3,96(a4)
   28:	2f333253          	.4byte	0x2f333253
   2c:	616c                	ld	a1,192(a0)
-  2e:	3162                	fld	ft2,56(sp)
+  2e:	3262                	fld	ft4,56(sp)
   30:	6178652f          	.4byte	0x6178652f
   34:	706d                	c.lui	zero,0xffffb
   36:	656c                	ld	a1,200(a0)
