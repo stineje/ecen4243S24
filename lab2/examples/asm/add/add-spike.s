@@ -424,8 +424,7 @@ success:
   csrr s9, instret        # Count # instructions completed after call made
   sub s9, s9, s8          # Calculate # instructions completed during call
   la t0, begin_signature  # Address of signature
-  sw a0, 0(t0)            # Store sum(N) in signature
-  sw s9, 8(t0)            # Record performance (# instr. executed during sum)
+  sw s9, 0(t0)            # Record performance (# instr. executed during add)
 
 write_tohost:
   la t1, tohost           # Load address of tohost label into t1
@@ -447,8 +446,8 @@ N:
 
 .EQU XLEN,32
 begin_signature:
-  .fill 2*(XLEN/32),4,0xdeadbeef # Initialize signature memory with 0xdeadbeef
-end_signature:                   # 2 XLEN words, each 4 bytes = 0xdeadbeef
+  .fill 1*(XLEN/32),4,0xdeadbeef # Initialize signature memory with 0xdeadbeef
+end_signature:                   # 1 XLEN words, with 4 bytes = 0xdeadbeef
 
 # Initialize stack with room for 512 bytes
 .bss

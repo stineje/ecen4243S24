@@ -20,7 +20,6 @@ Disassembly of section .data:
 
 80002004 <begin_signature>:
 80002004:	deadbeef          	jal	t4,7ffdd5ee <XLEN+0x7ffdd5ce>
-80002008:	deadbeef          	jal	t4,7ffdd5f2 <XLEN+0x7ffdd5d2>
 
 Disassembly of section .bss:
 
@@ -487,7 +486,7 @@ Disassembly of section .text:
 8000052c:	ad830313          	addi	t1,t1,-1320 # 80001000 <tohost>
 80000530:	00300293          	li	t0,3
 80000534:	00532023          	sw	t0,0(t1)
-80000538:	0300006f          	j	80000568 <self_loop>
+80000538:	02c0006f          	j	80000564 <self_loop>
 
 8000053c <success>:
 8000053c:	00a00513          	li	a0,10
@@ -495,14 +494,13 @@ Disassembly of section .text:
 80000544:	418c8cb3          	sub	s9,s9,s8
 80000548:	00002297          	auipc	t0,0x2
 8000054c:	abc28293          	addi	t0,t0,-1348 # 80002004 <begin_signature>
-80000550:	00a2a023          	sw	a0,0(t0)
-80000554:	0192a423          	sw	s9,8(t0)
+80000550:	0192a023          	sw	s9,0(t0)
 
-80000558 <write_tohost>:
-80000558:	00001317          	auipc	t1,0x1
-8000055c:	aa830313          	addi	t1,t1,-1368 # 80001000 <tohost>
-80000560:	00100293          	li	t0,1
-80000564:	00532023          	sw	t0,0(t1)
+80000554 <write_tohost>:
+80000554:	00001317          	auipc	t1,0x1
+80000558:	aac30313          	addi	t1,t1,-1364 # 80001000 <tohost>
+8000055c:	00100293          	li	t0,1
+80000560:	00532023          	sw	t0,0(t1)
 
-80000568 <self_loop>:
-80000568:	0000006f          	j	80000568 <self_loop>
+80000564 <self_loop>:
+80000564:	0000006f          	j	80000564 <self_loop>

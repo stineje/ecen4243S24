@@ -14,6 +14,11 @@ all:		$(PROGS)
 		$(OBJDUMP) -D $@.elf > $@.objdump
 		$(ELF2HEX) --bit-width 32 --input $@.elf --output $@.memfile
 
+sim:
+	spike --isa=rv32i +signature=$(TARGET).signature.output +signature-granularity=4 $(TARGET)
+	diff --ignore-case $(TARGET).signature.output $(TARGET).reference_output || exit
+	echo "Signature matches! Success!"
+
 clean: 
 		rm -f *.elf
 		rm -f *.objdump
