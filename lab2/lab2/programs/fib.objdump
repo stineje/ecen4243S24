@@ -1,0 +1,37 @@
+
+fib.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.2byte	0x1941
+   2:	0000                	.2byte	0x0
+   4:	7200                	.2byte	0x7200
+   6:	7369                	.2byte	0x7369
+   8:	01007663          	bgeu	zero,a6,14 <fib-0x7fffffec>
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.2byte	0x7205
+  12:	3376                	.2byte	0x3376
+  14:	6932                	.2byte	0x6932
+  16:	7032                	.2byte	0x7032
+  18:	0030                	.2byte	0x30
+
+Disassembly of section .text:
+
+80000000 <fib>:
+80000000:	02600e13          	li	t3,38
+80000004:	00000393          	li	t2,0
+80000008:	00100313          	li	t1,1
+8000000c:	00000293          	li	t0,0
+
+80000010 <fib_helper>:
+80000010:	000e0c63          	beqz	t3,80000028 <finish>
+80000014:	005303b3          	add	t2,t1,t0
+80000018:	00030293          	mv	t0,t1
+8000001c:	00038313          	mv	t1,t2
+80000020:	fffe0e13          	addi	t3,t3,-1
+80000024:	fedff06f          	j	80000010 <fib_helper>
+
+80000028 <finish>:
+80000028:	00000073          	ecall
