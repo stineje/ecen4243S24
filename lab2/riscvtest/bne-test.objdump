@@ -1,6 +1,12 @@
 
 bne-test.elf:     file format elf32-littleriscv
 
+Contents of section .riscv.attributes:
+ 0000 41190000 00726973 63760001 0f000000  A....riscv......
+ 0010 05727633 32693270 3000               .rv32i2p0.      
+Contents of section .text:
+ 80000000 93051000 93000000 13011000 63942000  ............c. .
+ 80000010 1303a002 73000000                    ....s...        
 
 Disassembly of section .riscv.attributes:
 
@@ -20,13 +26,16 @@ Disassembly of section .riscv.attributes:
 Disassembly of section .text:
 
 80000000 <__start>:
+test01():
 80000000:	00100593          	li	a1,1
 80000004:	00000093          	li	ra,0
 80000008:	00100113          	li	sp,1
 8000000c:	00209463          	bne	ra,sp,80000014 <label2_test01>
 
 80000010 <label1_test01>:
+label1_test01():
 80000010:	02a00313          	li	t1,42
 
 80000014 <label2_test01>:
+label2_test01():
 80000014:	00000073          	ecall
