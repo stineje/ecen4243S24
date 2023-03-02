@@ -17,7 +17,7 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # QuestaSim-64 vlog 2021.3_1 Compiler 2021.08 Aug 15 2021
-# Start time: 11:39:41 on Mar 02,2023
+# Start time: 12:11:04 on Mar 02,2023
 # vlog -reportprogress 300 riscv_single.sv 
 # -- Compiling module testbench
 # -- Compiling module riscvsingle
@@ -40,10 +40,10 @@
 # Top level modules:
 # 	testbench
 # 	flopenr
-# End time: 11:39:41 on Mar 02,2023, Elapsed time: 0:00:00
+# End time: 12:11:04 on Mar 02,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -debugdb -voptargs="+acc" work.testbench 
-# Start time: 11:39:41 on Mar 02,2023
+# Start time: 12:11:04 on Mar 02,2023
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Note: (vopt-4301) Memory core inferred for signal 'RAM' width=32, depth=256, type=RAM at location riscv_single.sv:299
@@ -65,12 +65,11 @@
 # Loading work.imem(fast)
 # Loading work.dmem(fast)
 # ** Note: (vsim-8900) Creating design debug database vsim.dbg.
-run 2000ns
-run 500ns
-# Simulation failed
-# ** Note: $stop    : riscv_single.sv(69)
-#    Time: 2365 ns  Iteration: 1  Instance: /testbench
-# Break in Module testbench at riscv_single.sv line 69
-run 500ns
-# End time: 11:43:22 on Mar 02,2023, Elapsed time: 0:03:41
+# Simulation succeeded
+# ** Note: $stop    : riscv_single.sv(66)
+#    Time: 195 ns  Iteration: 1  Instance: /testbench
+# Break in Module testbench at riscv_single.sv line 66
+run 20ns
+run 20ns
+# End time: 12:11:38 on Mar 02,2023, Elapsed time: 0:00:34
 # Errors: 0, Warnings: 0
