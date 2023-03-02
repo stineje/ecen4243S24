@@ -2,7 +2,8 @@
 .global fib
 .type fib, @function
 	
-fib:	
+fib:
+	li t4, 0x104            # Base Address
 	li t3, 0x26		# Load the value of n for F[n]
 	li t2, 0x0		# initialize
 	li t1, 0x1		# Load F[1] = 1 
@@ -16,4 +17,5 @@ fib_helper:
 	j fib_helper
 
 finish:
+	sw t1, 0(t4)
 	ecall

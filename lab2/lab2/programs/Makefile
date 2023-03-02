@@ -9,7 +9,7 @@ all:		$(PROGS)
 
 %:		%.s	
 		$(CC) $(CFLAGS) -o $@.elf $<
-		$(OBJDUMP) -D $@.elf > $@.objdump
+		$(OBJDUMP) -Dls $@.elf > $@.objdump
 		$(ELF2HEX) --bit-width 32 --input $@.elf --output $@.memfile
 
 clean: 
