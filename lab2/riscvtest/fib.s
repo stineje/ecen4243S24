@@ -17,5 +17,7 @@ fib_helper:
 	j fib_helper
 
 finish:
-	sw t1, 0(t4)
+	sw t0, 0(t4)
+	sw t1, 4(t4)	
+	lw a0, 0(t4)
 	ecall
