@@ -7,8 +7,8 @@ Contents of section .riscv.attributes:
 Contents of section .text:
  80000000 930e4010 130e6002 93030000 13031000  ..@...`.........
  80000010 93020000 630c0e00 b3035300 93020300  ....c.....S.....
- 80000020 13830300 130efeff 6ff0dffe 23a06e00  ........o...#.n.
- 80000030 73000000                             s...            
+ 80000020 13830300 130efeff 6ff0dffe 23a05e00  ........o...#.^.
+ 80000030 23a26e00 03a50e00 73000000           #.n.....s...    
 
 Disassembly of section .riscv.attributes:
 
@@ -46,5 +46,7 @@ fib_helper():
 
 8000002c <finish>:
 finish():
-8000002c:	006ea023          	sw	t1,0(t4)
-80000030:	00000073          	ecall
+8000002c:	005ea023          	sw	t0,0(t4)
+80000030:	006ea223          	sw	t1,4(t4)
+80000034:	000ea503          	lw	a0,0(t4)
+80000038:	00000073          	ecall
