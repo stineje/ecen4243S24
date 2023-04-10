@@ -93,7 +93,7 @@ module testbench();
      begin
 	string memfilename;
         memfilename = {"../riscvtest/riscvtest.memfile"};
-        $readmemh(memfilename, dut.imem.RAM);
+	$readmemh(memfilename, dut.imem.RAM);
      end
    
    // initialize test
