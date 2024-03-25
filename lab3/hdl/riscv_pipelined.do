@@ -52,6 +52,8 @@ add wave -noupdate -expand -group Instructions -color Orange /testbench/dut/rv32
 add wave -noupdate -expand -group Instructions -color Orange -radix Instructions /testbench/dut/rv32pipe/dp/InstrF
 add wave -noupdate -divider -height 32 "Datapath"
 add wave -hex /testbench/dut/rv32pipe/dp/*
+add wave -noupdate -divider -height 32 "Hazard Detection Unit"
+add wave -hex /testbench/dut/rv32pipe/hu/*
 add wave -noupdate -divider -height 32 "Control"
 add wave -hex /testbench/dut/rv32pipe/c/*
 add wave -noupdate -divider -height 32 "Main Decoder"
